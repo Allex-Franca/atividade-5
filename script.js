@@ -36,10 +36,8 @@
 // Comece pelo exercicio 1 e va ate o 4. Boa sorte!
 
 const btnTema = document.getElementById('btn-tema');
-
 btnTema.addEventListener('click', function() {
     document.body.classList.toggle('modo-escuro');
-
     if (document.body.classList.contains('modo-escuro')) {
         btnTema.textContent = 'Modo Claro';
     } else {
@@ -47,17 +45,30 @@ btnTema.addEventListener('click', function() {
     }
 });
 let visitas = 0;
-
 const btnVisita = document.getElementById('btn-visita');
 const numeroVisitas = document.getElementById('numero-visitas');
-
 btnVisita.addEventListener('click', function() {
     visitas++;
     numeroVisitas.textContent = visitas;
 });
 const barras = document.querySelectorAll('.progresso');
-
 barras.forEach(function(elemento) {
     const valor = elemento.getAttribute('data-valor');
     elemento.style.width = valor + '%';
+});
+const formContato = document.getElementById('form-contato');
+formContato.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+    const mensagem = document.getElementById('mensagem');
+    const respostaForm = document.getElementById('resposta-form');
+    if (nome.value === '' || email.value === '' || mensagem.value === '') {
+        alert('Preencha todos os campos!');
+    } else {
+        respostaForm.textContent = 'Obrigado, ' + nome.value + '! Sua mensagem foi enviada.';
+        nome.value = '';
+        email.value = '';
+        mensagem.value = '';
+    }
 });
