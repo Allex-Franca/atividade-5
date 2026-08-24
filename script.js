@@ -55,3 +55,9 @@ btnVisita.addEventListener('click', function() {
     visitas++;
     numeroVisitas.textContent = visitas;
 });
+const barras = document.querySelectorAll('.progresso');
+
+barras.forEach(function(elemento) {
+    const valor = elemento.getAttribute('data-valor');
+    elemento.style.width = valor + '%';
+});
