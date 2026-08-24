@@ -34,3 +34,15 @@
 //    - Limpe os campos depois: campo.value = ''
 //
 // Comece pelo exercicio 1 e va ate o 4. Boa sorte!
+
+const btnTema = document.getElementById('btn-tema');
+
+btnTema.addEventListener('click', function() {
+    document.body.classList.toggle('modo-escuro');
+
+    if (document.body.classList.contains('modo-escuro')) {
+        btnTema.textContent = 'Modo Claro';
+    } else {
+        btnTema.textContent = 'Modo Escuro';
+    }
+});

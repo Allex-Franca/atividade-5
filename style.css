@@ -46,3 +46,13 @@
 
    Bom trabalho!
 */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+body.modo-escuro {
+    background-color: #121212;
+    color: #f5f5f5;
+}
