@@ -46,3 +46,12 @@ btnTema.addEventListener('click', function() {
         btnTema.textContent = 'Modo Escuro';
     }
 });
+let visitas = 0;
+
+const btnVisita = document.getElementById('btn-visita');
+const numeroVisitas = document.getElementById('numero-visitas');
+
+btnVisita.addEventListener('click', function() {
+    visitas++;
+    numeroVisitas.textContent = visitas;
+});
