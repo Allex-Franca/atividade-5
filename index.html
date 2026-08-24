@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cartao de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Seu Nome Aqui</h1>
+        <p>Desenvolvedor Web</p>
+        <button id="btn-tema">Modo Escuro</button>
+    </header>
+
+    <main>
+
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Ola! Eu sou um estudante do SENAI e estou aprendendo desenvolvimento web. Gosto de criar sites e aprender novas tecnologias.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Minhas Habilidades</h2>
+
+            <div class="habilidade">
+                <span>HTML</span>
+                <div class="barra-progresso">
+                    <div class="progresso" data-valor="90"></div>
+                </div>
+            </div>
+
+            <div class="habilidade">
+                <span>CSS</span>
+                <div class="barra-progresso">
+                    <div class="progresso" data-valor="70"></div>
+                </div>
+            </div>
+
+            <div class="habilidade">
+                <span>JavaScript</span>
+                <div class="barra-progresso">
+                    <div class="progresso" data-valor="50"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contador">
+            <h2>Contador de Visitas</h2>
+            <p>Este cartao foi visitado <span id="numero-visitas">0</span> vezes.</p>
+            <button id="btn-visita">Visitei!</button>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Comigo</h2>
+            <form id="form-contato">
+                <div class="campo">
+                    <label for="nome">Seu nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                </div>
+                <button type="submit" id="btn-enviar">Enviar</button>
+            </form>
+            <p id="resposta-form"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito com dedicacao no SENAI - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
